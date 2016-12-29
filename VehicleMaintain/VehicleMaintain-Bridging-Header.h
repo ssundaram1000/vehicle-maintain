@@ -9,5 +9,6 @@
 #ifndef VehicleMaintain_Bridging_Header_h
 #define VehicleMaintain_Bridging_Header_h
 
+#import <Google/SignIn.h>
 
 #endif /* VehicleMaintain_Bridging_Header_h */
