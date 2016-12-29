@@ -56,8 +56,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, 
                 if task.error != nil {
                     print(task.error ?? "unknown error")
                 } else {
-                    //self.performSegue(withIdentifier: "login", sender: nil)
-                    print("Will START ----------------------")
+                    self.performSegue(withIdentifier: "login", sender: self)
                 }
                 
                 return nil
@@ -89,9 +88,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, 
         // ...
     }
     
-//    @IBAction func didTapSignOut(sender: AnyObject) {
-//        GIDSignIn.sharedInstance().signOut()
-//    }
+
     
     
 

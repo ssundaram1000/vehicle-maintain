@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041AB8641E156F0400949A17 /* VehicleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AB8631E156F0400949A17 /* VehicleTableViewController.swift */; };
 		047324F41E1559420065DD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047324F31E1559420065DD35 /* AppDelegate.swift */; };
 		047324F61E1559420065DD35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047324F51E1559420065DD35 /* ViewController.swift */; };
 		047324F91E1559420065DD35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047324F71E1559420065DD35 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041AB8631E156F0400949A17 /* VehicleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewController.swift; sourceTree = "<group>"; };
 		047324F01E1559420065DD35 /* VehicleMaintain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleMaintain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047324F31E1559420065DD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047324F51E1559420065DD35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				047324FC1E1559420065DD35 /* LaunchScreen.storyboard */,
 				047324FF1E1559420065DD35 /* Info.plist */,
 				047325231E155CF80065DD35 /* VehicleMaintain-Bridging-Header.h */,
+				041AB8631E156F0400949A17 /* VehicleTableViewController.swift */,
 			);
 			path = VehicleMaintain;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047324F61E1559420065DD35 /* ViewController.swift in Sources */,
+				041AB8641E156F0400949A17 /* VehicleTableViewController.swift in Sources */,
 				047324F41E1559420065DD35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
