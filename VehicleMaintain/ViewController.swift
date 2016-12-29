@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AWSCognito
 
-class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
+class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, AWSIdentityProviderManager {
     var googleIdToken = ""
     
     override func viewDidLoad() {
@@ -29,18 +30,54 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func signInToCognito(user: GIDGoogleUser!) {
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.usEast1,
+                                                                identityPoolId:"us-east-1:293b514e-dd0a-4fec-839b-0f368267fb6a", identityProviderManager: self)
+        
+        let configuration = AWSServiceConfiguration(region:.usEast1, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        credentialsProvider.getIdentityId().continue({ (task:AWSTask) -> AnyObject? in
+            if (task.error != nil) {
+                print(task.error!)
+                return nil
+            }
+            
+            let syncClient = AWSCognito.default()
+            let dataset = syncClient?.openOrCreateDataset("VehicleMaintainDataSet")
+            
+            dataset?.setString(user.profile.email, forKey: "email")
+            dataset?.setString(user.profile.name, forKey: "name")
+            
+            let result = dataset?.synchronize()
+            
+            result?.continue({ (task:AWSTask) -> AnyObject? in
+                if task.error != nil {
+                    print(task.error ?? "unknown error")
+                } else {
+                    //self.performSegue(withIdentifier: "login", sender: nil)
+                    print("Will START ----------------------")
+                }
+                
+                return nil
+            })
+            
+            return nil
+        })
+    }
+    func logins() -> AWSTask<NSDictionary> {
+        let result = NSDictionary(dictionary: [AWSIdentityProviderGoogle: googleIdToken])
+        return AWSTask(result: result)
+    }
+    
+    
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         // The sign-in flow has finished and was successful if |error| is |nil|.
         if (error == nil) {
             // Perform any operations on signed in user here.
             googleIdToken = user.authentication.idToken // Safe to send to the server
-            //signInToCognito(user: user)
-                        googleIdToken = user.userID                  // For client-side use only!
-                        let fullName = user.profile.name
-                        let givenName = user.profile.givenName
-                        let familyName = user.profile.familyName
-                        let email = user.profile.email
-                        print(googleIdToken, fullName, email)
+            signInToCognito(user: user)
             // ...
         } else {
             print("\(error.localizedDescription)")

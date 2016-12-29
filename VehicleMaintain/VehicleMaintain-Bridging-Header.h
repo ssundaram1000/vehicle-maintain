@@ -10,5 +10,8 @@
 #define VehicleMaintain_Bridging_Header_h
 
 #import <Google/SignIn.h>
+#import <AWSCore/AWSCore.h>
+#import <AWSCognito/AWSCognito.h>
+#import <AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.h>
 
 #endif /* VehicleMaintain_Bridging_Header_h */
