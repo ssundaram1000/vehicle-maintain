@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.2.0)
   - AWSCognito (2.4.16):
     - AWSCore (= 2.4.16)
   - AWSCognitoIdentityProvider (2.4.16):
@@ -46,13 +47,17 @@ PODS:
   - GTMSessionFetcher/Core (1.1.7)
   - GTMSessionFetcher/Full (1.1.7):
     - GTMSessionFetcher/Core (= 1.1.7)
+  - SwiftyJSON (3.1.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.2)
   - AWSCognito
   - AWSCognitoIdentityProvider
   - Google/SignIn
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AWSCognito: 666dba6eb65ac27faad79e83febf25630913aefc
   AWSCognitoIdentityProvider: 1c74bb819fc5f74a708a4a8e0be8b235a959ab86
   AWSCore: 7c3c129991e6387bcbad7132bc3661e7135754db
@@ -67,7 +72,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: 0039b1ff2f131bd0ea7dc3e5f9a594057cb7c12e
+PODFILE CHECKSUM: b6cce4b80dcd7565c8bae3cd88ba00f5ec93993a
 
 COCOAPODS: 1.1.1

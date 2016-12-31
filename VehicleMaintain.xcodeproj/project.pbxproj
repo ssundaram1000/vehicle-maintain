@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		041AB8641E156F0400949A17 /* VehicleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041AB8631E156F0400949A17 /* VehicleTableViewController.swift */; };
+		041DCA301E16EC750017606A /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DCA2E1E16EC750017606A /* TaskListTableViewCell.swift */; };
+		041DCA311E16EC750017606A /* TaskListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DCA2F1E16EC750017606A /* TaskListTableViewCell.xib */; };
+		043FD9671E181FD200D9D72E /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */; };
+		043FD96A1E1826E500D9D72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043FD9681E1826E500D9D72E /* Main.storyboard */; };
 		047324F41E1559420065DD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047324F31E1559420065DD35 /* AppDelegate.swift */; };
 		047324F61E1559420065DD35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047324F51E1559420065DD35 /* ViewController.swift */; };
-		047324F91E1559420065DD35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047324F71E1559420065DD35 /* Main.storyboard */; };
 		047324FB1E1559420065DD35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047324FA1E1559420065DD35 /* Assets.xcassets */; };
 		047324FE1E1559420065DD35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047324FC1E1559420065DD35 /* LaunchScreen.storyboard */; };
 		047325091E1559420065DD35 /* VehicleMaintainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047325081E1559420065DD35 /* VehicleMaintainTests.swift */; };
@@ -40,10 +43,13 @@
 
 /* Begin PBXFileReference section */
 		041AB8631E156F0400949A17 /* VehicleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewController.swift; sourceTree = "<group>"; };
+		041DCA2E1E16EC750017606A /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
+		041DCA2F1E16EC750017606A /* TaskListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskListTableViewCell.xib; sourceTree = "<group>"; };
+		043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
+		043FD9691E1826E500D9D72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047324F01E1559420065DD35 /* VehicleMaintain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleMaintain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047324F31E1559420065DD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047324F51E1559420065DD35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		047324F81E1559420065DD35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047324FA1E1559420065DD35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047324FD1E1559420065DD35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047324FF1E1559420065DD35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,15 +125,18 @@
 		047324F21E1559420065DD35 /* VehicleMaintain */ = {
 			isa = PBXGroup;
 			children = (
+				043FD9681E1826E500D9D72E /* Main.storyboard */,
 				047325211E155AD70065DD35 /* GoogleService-Info.plist */,
 				047324F31E1559420065DD35 /* AppDelegate.swift */,
 				047324F51E1559420065DD35 /* ViewController.swift */,
-				047324F71E1559420065DD35 /* Main.storyboard */,
 				047324FA1E1559420065DD35 /* Assets.xcassets */,
 				047324FC1E1559420065DD35 /* LaunchScreen.storyboard */,
 				047324FF1E1559420065DD35 /* Info.plist */,
 				047325231E155CF80065DD35 /* VehicleMaintain-Bridging-Header.h */,
 				041AB8631E156F0400949A17 /* VehicleTableViewController.swift */,
+				041DCA2E1E16EC750017606A /* TaskListTableViewCell.swift */,
+				041DCA2F1E16EC750017606A /* TaskListTableViewCell.xib */,
+				043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */,
 			);
 			path = VehicleMaintain;
 			sourceTree = "<group>";
@@ -290,9 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				047324FE1E1559420065DD35 /* LaunchScreen.storyboard in Resources */,
+				043FD96A1E1826E500D9D72E /* Main.storyboard in Resources */,
+				041DCA311E16EC750017606A /* TaskListTableViewCell.xib in Resources */,
 				047325221E155AD70065DD35 /* GoogleService-Info.plist in Resources */,
 				047324FB1E1559420065DD35 /* Assets.xcassets in Resources */,
-				047324F91E1559420065DD35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,8 +465,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041DCA301E16EC750017606A /* TaskListTableViewCell.swift in Sources */,
 				047324F61E1559420065DD35 /* ViewController.swift in Sources */,
 				041AB8641E156F0400949A17 /* VehicleTableViewController.swift in Sources */,
+				043FD9671E181FD200D9D72E /* VehicleDetailViewController.swift in Sources */,
 				047324F41E1559420065DD35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,10 +505,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		047324F71E1559420065DD35 /* Main.storyboard */ = {
+		043FD9681E1826E500D9D72E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				047324F81E1559420065DD35 /* Base */,
+				043FD9691E1826E500D9D72E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

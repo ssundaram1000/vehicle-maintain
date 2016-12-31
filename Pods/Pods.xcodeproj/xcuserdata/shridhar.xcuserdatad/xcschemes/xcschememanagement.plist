@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -49,14 +54,14 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>050E65955867D6BFB470EE672D30413E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
@@ -67,12 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4BAE4A384A395D2A7A521DED8A90425F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53C6112213829CB147F47E473C93F271</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>681BE6E3D02A43F9BA63777AC435C8FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D1A751D5099B76FBEF439207F1B902D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

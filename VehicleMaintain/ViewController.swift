@@ -9,6 +9,8 @@
 import UIKit
 import AWSCognito
 
+
+
 class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, AWSIdentityProviderManager {
     var googleIdToken = ""
     

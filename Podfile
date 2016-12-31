@@ -6,6 +6,9 @@ target 'VehicleMaintain' do
   use_frameworks!
 
   # Pods for VehicleMaintain
+    pod 'Alamofire', '~> 4.2'
+    pod 'SwiftyJSON'
+
     pod 'Google/SignIn'
     pod 'AWSCognito'
     pod 'AWSCognitoIdentityProvider'
