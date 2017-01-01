@@ -85,6 +85,9 @@ class VehicleDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBAction func backToList(_ sender: Any) {
         //performSegue(withIdentifier: "toVehicleListViewController", sender: nil);
         navigationController?.popViewController(animated:true)
+        if let x = navigationController?.topViewController as! VehicleTableViewController? {
+            x.refresh();
+        }
     }
 
 

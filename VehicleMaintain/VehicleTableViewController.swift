@@ -22,8 +22,6 @@ class VehicleTableViewController: UITableViewController {
     var vehicleJson: JSON = JSON.null
     
     @IBOutlet var tableViewWidget: UITableView!
-    //let url = "https://wo53w3qno8.execute-api.us-east-1.amazonaws.com/test/checklist/70044/JN1CV7AP8HM640077";
-    //let url = "https://wo53w3qno8.execute-api.us-east-1.amazonaws.com/test/inventory/70044";
     let url = "https://wo53w3qno8.execute-api.us-east-1.amazonaws.com/test/inventory/tasks/70044/2"
     var inventoryJSON: JSON = JSON.null
     
@@ -80,10 +78,26 @@ class VehicleTableViewController: UITableViewController {
 //        }
 //    }
     
+    var refresher: UIRefreshControl!
+    func refresh() {
+        getDealerVehicles()
+        DispatchQueue.main.async {
+            self.tableViewWidget.reloadData()
+            self.refresher.endRefreshing()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getVehicles()
-        getDealerVehicles()
+
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        
+        // SHRIDHAR: Note: We should call self.refresh not UserViewController.refresh
+        refresher.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+        
+        self.tableView.addSubview(refresher)
+        
+        refresh()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -139,8 +139,8 @@
 				047324FF1E1559420065DD35 /* Info.plist */,
 				047325231E155CF80065DD35 /* VehicleMaintain-Bridging-Header.h */,
 				041AB8631E156F0400949A17 /* VehicleTableViewController.swift */,
-				043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */,
 				041DCA2E1E16EC750017606A /* TaskListTableViewCell.swift */,
+				043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */,
 				043FD96D1E183FAA00D9D72E /* ChecklistTableViewCell.swift */,
 				047325071E1559420065DD35 /* VehicleMaintainTests */,
 			);

@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChecklistTableViewCell: UITableViewCell {
-
+    
+    var vin = "";
+    var checkListId = "";
     @IBOutlet var lblChecklist: UILabel!
     @IBOutlet var btnDone: UIButton!
     
-    var vin = ""
-    var checkListId = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,8 +27,24 @@ class ChecklistTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func onDone(_ sender: Any) {
-        print("Will mark \(checkListId) done for \(vin)")
+        //print("Will mark \(checkListId) done for \(vin)")
+        // I may need to show the waiting indicator...
+        addActivity();
         btnDone.isHidden = true;
+    }
+
+    func addActivity() {
+        let url = "https://wo53w3qno8.execute-api.us-east-1.amazonaws.com/test/activities/\(vin)/\(checkListId)";
+        // set didCompleteActivity = true on parent tableView
+        
+        Alamofire.request(url, method: .post).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                print("Success in adding")
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 }
