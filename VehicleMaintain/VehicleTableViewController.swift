@@ -14,15 +14,13 @@ class VehicleTableViewController: UITableViewController {
     
 
     //-- ToDo
-    // make the JSON Data available to details screen
-    // Click on the item should take me to details view page -- send the selected VIN to the details view in the segue
-    // on ViewDidLoad, show the VIN Selected -- JUST to test the segue
-    
-    // Create a details view screen
-    // Contains 2 sections -- Vehicle Content and then a table view with the tasks
+    // Now hide the button after Done is clicked
+    // Add code to update the DB
+    // On Back, need to refresh the data on UI for main list
 
     
-    var activeRow = 0
+    var vehicleJson: JSON = JSON.null
+    
     @IBOutlet var tableViewWidget: UITableView!
     //let url = "https://wo53w3qno8.execute-api.us-east-1.amazonaws.com/test/checklist/70044/JN1CV7AP8HM640077";
     //let url = "https://wo53w3qno8.execute-api.us-east-1.amazonaws.com/test/inventory/70044";
@@ -34,7 +32,6 @@ class VehicleTableViewController: UITableViewController {
             switch response.result {
             case .success(let value):
                 self.inventoryJSON = JSON(value)
-                //print("JSON: \(self.inventoryJSON)")
                 self.tableViewWidget.reloadData()
 //                for (index,subJson):(String, JSON) in json {
 //                    print("checkListDesc: \(subJson["checkListDesc"]) frequency: \(subJson["frequency"])")
@@ -121,17 +118,17 @@ class VehicleTableViewController: UITableViewController {
         }
     }
 
-    func load_image(urlString:String) -> UIImage
-    {
-        let url = NSURL(string:urlString)
-        let data = NSData(contentsOf:url! as URL)
-        if data != nil {
-            return UIImage(data:data! as Data)!
-        }
-        else {
-            return UIImage()
-        }
-    }
+//    func load_image(urlString:String) -> UIImage
+//    {
+//        let url = NSURL(string:urlString)
+//        let data = NSData(contentsOf:url! as URL)
+//        if data != nil {
+//            return UIImage(data:data! as Data)!
+//        }
+//        else {
+//            return UIImage()
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell");
@@ -144,15 +141,13 @@ class VehicleTableViewController: UITableViewController {
         cell.label1.text = inventoryJSON[indexPath.row]["baseName"].string! + " " + inventoryJSON[indexPath.row]["color"].string!;
         cell.label2.text = inventoryJSON[indexPath.row]["vin"].string!;
 
-        // Configure the cell...
-        //print (inventoryJSON[indexPath.row]["checkListDesc"])
-        //cell.textLabel?.text = inventoryJSON[indexPath.row]["vin"].string! + inventoryJSON[indexPath.row]["swatchURL"].string!
         return cell
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        activeRow = indexPath.row;
-        performSegue(withIdentifier: "toDetailViewController", sender: nil)
+        //activeRow = indexPath.row;
+        vehicleJson = inventoryJSON[indexPath.row]
+        performSegue(withIdentifier: "toDetailViewController", sender: self)
     }
     /*
     // Override to support conditional editing of the table view.
@@ -206,7 +201,8 @@ class VehicleTableViewController: UITableViewController {
             self.navigationController?.navigationBar.isHidden = true
         } else if (segue.identifier == "toDetailViewController") {
             let detailViewController = segue.destination as! VehicleDetailViewController
-            detailViewController.activeRow = activeRow
+            detailViewController.vehicleJson = vehicleJson
+            //detailViewController.inventoryJSON = inventoryJSON
         }
     }
     @IBAction func onLogout(_ sender: Any) {

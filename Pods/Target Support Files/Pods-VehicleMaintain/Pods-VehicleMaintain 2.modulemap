@@ -1,0 +1,6 @@
+framework module Pods_VehicleMaintain {
+  umbrella header "Pods-VehicleMaintain-umbrella.h"
+
+  export *
+  module * { export * }
+}

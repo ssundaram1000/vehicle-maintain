@@ -12,6 +12,8 @@
 		041DCA311E16EC750017606A /* TaskListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DCA2F1E16EC750017606A /* TaskListTableViewCell.xib */; };
 		043FD9671E181FD200D9D72E /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */; };
 		043FD96A1E1826E500D9D72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043FD9681E1826E500D9D72E /* Main.storyboard */; };
+		043FD96F1E183FAA00D9D72E /* ChecklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FD96D1E183FAA00D9D72E /* ChecklistTableViewCell.swift */; };
+		043FD9701E183FAA00D9D72E /* ChecklistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043FD96E1E183FAA00D9D72E /* ChecklistTableViewCell.xib */; };
 		047324F41E1559420065DD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047324F31E1559420065DD35 /* AppDelegate.swift */; };
 		047324F61E1559420065DD35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047324F51E1559420065DD35 /* ViewController.swift */; };
 		047324FB1E1559420065DD35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047324FA1E1559420065DD35 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		041DCA2F1E16EC750017606A /* TaskListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskListTableViewCell.xib; sourceTree = "<group>"; };
 		043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		043FD9691E1826E500D9D72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		043FD96D1E183FAA00D9D72E /* ChecklistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewCell.swift; sourceTree = "<group>"; };
+		043FD96E1E183FAA00D9D72E /* ChecklistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChecklistTableViewCell.xib; sourceTree = "<group>"; };
 		047324F01E1559420065DD35 /* VehicleMaintain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleMaintain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047324F31E1559420065DD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047324F51E1559420065DD35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				047324F21E1559420065DD35 /* VehicleMaintain */,
-				047325071E1559420065DD35 /* VehicleMaintainTests */,
 				047325121E1559420065DD35 /* VehicleMaintainUITests */,
 				047324F11E1559420065DD35 /* Products */,
 				F61C8F746ABB8ACEA392911B /* Pods */,
@@ -126,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				043FD9681E1826E500D9D72E /* Main.storyboard */,
+				041DCA2F1E16EC750017606A /* TaskListTableViewCell.xib */,
+				043FD96E1E183FAA00D9D72E /* ChecklistTableViewCell.xib */,
 				047325211E155AD70065DD35 /* GoogleService-Info.plist */,
 				047324F31E1559420065DD35 /* AppDelegate.swift */,
 				047324F51E1559420065DD35 /* ViewController.swift */,
@@ -134,9 +139,10 @@
 				047324FF1E1559420065DD35 /* Info.plist */,
 				047325231E155CF80065DD35 /* VehicleMaintain-Bridging-Header.h */,
 				041AB8631E156F0400949A17 /* VehicleTableViewController.swift */,
-				041DCA2E1E16EC750017606A /* TaskListTableViewCell.swift */,
-				041DCA2F1E16EC750017606A /* TaskListTableViewCell.xib */,
 				043FD9661E181FD200D9D72E /* VehicleDetailViewController.swift */,
+				041DCA2E1E16EC750017606A /* TaskListTableViewCell.swift */,
+				043FD96D1E183FAA00D9D72E /* ChecklistTableViewCell.swift */,
+				047325071E1559420065DD35 /* VehicleMaintainTests */,
 			);
 			path = VehicleMaintain;
 			sourceTree = "<group>";
@@ -148,7 +154,7 @@
 				0473250A1E1559420065DD35 /* Info.plist */,
 			);
 			path = VehicleMaintainTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		047325121E1559420065DD35 /* VehicleMaintainUITests */ = {
 			isa = PBXGroup;
@@ -298,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043FD9701E183FAA00D9D72E /* ChecklistTableViewCell.xib in Resources */,
 				047324FE1E1559420065DD35 /* LaunchScreen.storyboard in Resources */,
 				043FD96A1E1826E500D9D72E /* Main.storyboard in Resources */,
 				041DCA311E16EC750017606A /* TaskListTableViewCell.xib in Resources */,
@@ -469,6 +476,7 @@
 				047324F61E1559420065DD35 /* ViewController.swift in Sources */,
 				041AB8641E156F0400949A17 /* VehicleTableViewController.swift in Sources */,
 				043FD9671E181FD200D9D72E /* VehicleDetailViewController.swift in Sources */,
+				043FD96F1E183FAA00D9D72E /* ChecklistTableViewCell.swift in Sources */,
 				047324F41E1559420065DD35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
